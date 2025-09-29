@@ -9,4 +9,5 @@ import java.util.List;
 public interface DailyReportRepository extends JpaRepository<DailyReport, Long> {
     List<DailyReport> findByUser_UserId(String userId);   // notice User_UserId
 //    DailyReport findByStaff_StaffId(Long staffId);        // notice Staff_StaffId
+    DailyReport findByStaff_StaffId(Long staffId);        // notice Staff_StaffId
 }

@@ -37,6 +37,10 @@ public class DailyReportController {
 //    public DailyReport getReportByStaffId(@PathVariable Long staffId) {
 //        return reportService.getReportByStaffId(staffId);
 //    }
+    @GetMapping("/staff/{staffId}")
+    public DailyReport getReportByStaffId(@PathVariable Long staffId) {
+        return reportService.getReportByStaffId(staffId);
+    }
 
     @PutMapping("/{id}")
     public DailyReport updateReport(@PathVariable Long id, @RequestBody DailyReport report) {

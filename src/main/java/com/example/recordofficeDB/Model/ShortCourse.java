@@ -23,7 +23,12 @@ public class ShortCourse {
     private User user;
 
     // One short course belongs to one Staff
+
 //    @ManyToOne
 //    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
 //    private Staff staff;
+    @ManyToOne
+    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
+    private Staff staff;
+
 }

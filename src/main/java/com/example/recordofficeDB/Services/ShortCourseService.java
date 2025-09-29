@@ -35,9 +35,14 @@ public class ShortCourseService {
     }
 
     // Get short courses by Staff ID
+
 //    public List<ShortCourse> getShortCoursesByStaffId(Long staffId) {
 //        return shortCourseRepository.findByStaff_StaffId(staffId);
 //    }
+
+    public List<ShortCourse> getShortCoursesByStaffId(Long staffId) {
+        return shortCourseRepository.findByStaff_StaffId(staffId);
+    }
 
     // Update short course
     public ShortCourse updateShortCourse(Long id, ShortCourse updatedShortCourse) {
@@ -47,6 +52,7 @@ public class ShortCourseService {
         sc.setDate(updatedShortCourse.getDate());
         sc.setActivity(updatedShortCourse.getActivity());
         sc.setUser(updatedShortCourse.getUser());
+        sc.setStaff(updatedShortCourse.getStaff());
 
         return shortCourseRepository.save(sc);
     }

@@ -31,4 +31,8 @@ public class DailyReport {
 //
 //    @JoinColumn(name = "staff_id", referencedColumnName = "staffId", nullable = false)
 //    private Staff staff;
+    @OneToOne
+
+    @JoinColumn(name = "staff_id", referencedColumnName = "staffId", nullable = false)
+    private Staff staff;
 }

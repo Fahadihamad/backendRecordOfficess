@@ -31,4 +31,7 @@ public class HighEducation {
 //    @ManyToOne
 //    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
 //    private Staff staff;
+    @ManyToOne
+    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
+    private Staff staff;
 }

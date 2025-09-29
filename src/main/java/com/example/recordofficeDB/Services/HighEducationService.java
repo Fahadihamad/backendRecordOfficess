@@ -39,6 +39,10 @@ public class HighEducationService {
 //        return highEducationRepository.findByStaff_StaffId(staffId);
 //    }
 
+    public List<HighEducation> getHighEducationByStaffId(Long staffId) {
+        return highEducationRepository.findByStaff_StaffId(staffId);
+    }
+
     // Update
     public HighEducation updateHighEducation(Long id, HighEducation updatedHighEducation) {
         HighEducation he = highEducationRepository.findById(id)
@@ -49,6 +53,7 @@ public class HighEducationService {
         he.setResult(updatedHighEducation.getResult());
         he.setUser(updatedHighEducation.getUser());
 //        he.setStaff(updatedHighEducation.getStaff());
+        he.setStaff(updatedHighEducation.getStaff());
 
         return highEducationRepository.save(he);
     }

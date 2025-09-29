@@ -32,6 +32,9 @@ public class DailyReportService {
 //    public DailyReport getReportByStaffId(Long staffId) {
 //        return reportRepository.findByStaff_StaffId(staffId);
 //    }
+    public DailyReport getReportByStaffId(Long staffId) {
+        return reportRepository.findByStaff_StaffId(staffId);
+    }
 
     public DailyReport updateReport(Long id, DailyReport updatedReport) {
         DailyReport report = reportRepository.findById(id)
@@ -41,7 +44,9 @@ public class DailyReportService {
         report.setActivity(updatedReport.getActivity());
         report.setProgress(updatedReport.getProgress());
         report.setRecommendation(updatedReport.getRecommendation());
+
 //        report.setStaff(updatedReport.getStaff());
+        report.setStaff(updatedReport.getStaff());
         report.setUser(updatedReport.getUser());
 
         return reportRepository.save(report);

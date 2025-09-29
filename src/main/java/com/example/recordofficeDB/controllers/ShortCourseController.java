@@ -39,6 +39,10 @@ public class ShortCourseController {
 //    public List<ShortCourse> getShortCoursesByStaffId(@PathVariable Long staffId) {
 //        return shortCourseService.getShortCoursesByStaffId(staffId);
 //    }
+    @GetMapping("/staff/{staffId}")
+    public List<ShortCourse> getShortCoursesByStaffId(@PathVariable Long staffId) {
+        return shortCourseService.getShortCoursesByStaffId(staffId);
+    }
 
     @PutMapping("/{id}")
     public ShortCourse updateShortCourse(@PathVariable Long id, @RequestBody ShortCourse shortCourse) {

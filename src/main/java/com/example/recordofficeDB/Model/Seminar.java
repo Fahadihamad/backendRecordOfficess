@@ -22,6 +22,9 @@ public class Seminar {
 //    @OneToOne
 //    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
 //    private Staff staff;
+    @OneToOne
+    @JoinColumn(name = "staff_id", referencedColumnName = "staffId")
+    private Staff staff;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")

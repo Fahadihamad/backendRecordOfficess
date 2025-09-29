@@ -30,10 +30,15 @@ public class SeminarController {
         return seminarService.getSeminarById(id);
     }
 
+
 //    @GetMapping("/staff/{staffId}")
 //    public List<Seminar> getSeminarsByStaffId(@PathVariable Long staffId) {
 //        return seminarService.getSeminarsByStaffId(staffId);
 //    }
+    @GetMapping("/staff/{staffId}")
+    public List<Seminar> getSeminarsByStaffId(@PathVariable Long staffId) {
+        return seminarService.getSeminarsByStaffId(staffId);
+    }
 
     @GetMapping("/user/{userId}")
     public List<Seminar> getSeminarsByUserId(@PathVariable String userId) {

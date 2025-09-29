@@ -41,6 +41,9 @@ public class HighEducationController {
 //        com.example.recordofficeDB.Model.Staff staff = new com.example.recordofficeDB.Model.Staff();
 //        staff.setStaffId(staffId);
 //        he.setStaff(staff);
+        com.example.recordofficeDB.Model.Staff staff = new com.example.recordofficeDB.Model.Staff();
+        staff.setStaffId(staffId);
+        he.setStaff(staff);
 
         return highEducationService.addHighEducation(he);
     }
@@ -60,10 +63,16 @@ public class HighEducationController {
         return highEducationService.getHighEducationByUserId(userId);
     }
 
+
 //    @GetMapping("/staff/{staffId}")
 //    public List<HighEducation> getHighEducationByStaffId(@PathVariable Long staffId) {
 //        return highEducationService.getHighEducationByStaffId(staffId);
 //    }
+    @GetMapping("/staff/{staffId}")
+    public List<HighEducation> getHighEducationByStaffId(@PathVariable Long staffId) {
+        return highEducationService.getHighEducationByStaffId(staffId);
+    }
+
 
     @PutMapping("/{id}")
     public HighEducation updateHighEducation(

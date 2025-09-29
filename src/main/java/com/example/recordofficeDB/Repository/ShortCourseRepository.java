@@ -10,4 +10,5 @@ import java.util.List;
 public interface ShortCourseRepository extends JpaRepository<ShortCourse, Long> {
     List<ShortCourse> findByUser_UserId(String userId);
 //    List<ShortCourse> findByStaff_StaffId(Long staffId);
+    List<ShortCourse> findByStaff_StaffId(Long staffId);
 }

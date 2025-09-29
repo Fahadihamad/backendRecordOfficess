@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface SeminarRepository extends JpaRepository<Seminar, Long> {
 //    List<Seminar> findByStaff_StaffId(Long staffId);
+    List<Seminar> findByStaff_StaffId(Long staffId);
     List<Seminar> findByUser_UserId(String userId);   // ✅ new
 }
 

@@ -28,5 +28,26 @@ public class Staff {
 //
 //    @OneToOne(mappedBy = "staff", cascade = CascadeType.ALL)
 //    private Seminar seminar;
+//    @OneToOne(mappedBy = "staff", cascade = CascadeType.ALL)
+//    private DailyReport dailyReport;
+//
+//    @OneToOne(mappedBy = "staff", cascade = CascadeType.ALL)
+//    private Seminar seminar;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

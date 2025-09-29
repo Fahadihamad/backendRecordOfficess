@@ -10,4 +10,6 @@ import java.util.List;
 public interface HighEducationRepository extends JpaRepository<HighEducation, Long> {
     List<HighEducation> findByUser_UserId(String userId);
 //    List<HighEducation> findByStaff_StaffId(Long staffId);
+    List<HighEducation> findByStaff_StaffId(Long staffId);
+
 }

@@ -26,9 +26,14 @@ public class SeminarService {
                 .orElseThrow(() -> new RuntimeException("Seminar not found with id " + id));
     }
 
+
 //    public List<Seminar> getSeminarsByStaffId(Long staffId) {
 //        return seminarRepository.findByStaff_StaffId(staffId);
 //    }
+    public List<Seminar> getSeminarsByStaffId(Long staffId) {
+        return seminarRepository.findByStaff_StaffId(staffId);
+    }
+
 
     public List<Seminar> getSeminarsByUserId(String userId) {
         return seminarRepository.findByUser_UserId(userId);
@@ -40,7 +45,10 @@ public class SeminarService {
 
         seminar.setDate(updatedSeminar.getDate());
         seminar.setActivity(updatedSeminar.getActivity());
+
 //        seminar.setStaff(updatedSeminar.getStaff());
+        seminar.setStaff(updatedSeminar.getStaff());
+
         seminar.setUser(updatedSeminar.getUser());
 
         return seminarRepository.save(seminar);
